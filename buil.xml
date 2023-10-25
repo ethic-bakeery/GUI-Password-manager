@@ -1,0 +1,26 @@
+<project name="MyJavaApp" basedir="." default="build">
+    <description>Builds the Java application</description>
+
+    <target name="init">
+        <!-- Initialization tasks, if any -->
+    </target>
+
+    <target name="compile" depends="init">
+        <!-- Compile your Java source files here -->
+        <javac srcdir="src" destdir="build/classes"/>
+    </target>
+
+    <target name="jar" depends="compile">
+        <!-- Create JAR file with manifest attributes -->
+        <jar destfile="dist/Keyring.jar" basedir="build/classes">
+            <manifest>
+                <attribute name="Main-Class" value="keyring.Main"/>
+            </manifest>
+        </jar>
+    </target>
+
+    <target name="build" depends="jar">
+        <!-- Additional build tasks, if any -->
+    </target>
+</project>
+

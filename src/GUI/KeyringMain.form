@@ -1,0 +1,355 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<Form version="1.5" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
+  <NonVisualComponents>
+    <Container class="javax.swing.JPopupMenu" name="jPopupMenu_tablePassword">
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="jPopupMenu_tablePassword.addPopupMenuListener(new PopupMenuListener() {&#xa;&#xa;            @Override&#xa;            public void popupMenuWillBecomeVisible(PopupMenuEvent e) {&#xa;                SwingUtilities.invokeLater(new Runnable() {&#xa;                    @Override&#xa;                    public void run() {&#xa;                        int rowAtPoint = jTable_passwords.rowAtPoint(SwingUtilities.convertPoint(jPopupMenu_tablePassword, new Point(0, 0), jTable_passwords));&#xa;                        if (rowAtPoint &gt; -1) {&#xa;                            jTable_passwords.setRowSelectionInterval(rowAtPoint, rowAtPoint);&#xa;                        }&#xa;                    }&#xa;                });&#xa;            }&#xa;&#xa;            @Override&#xa;            public void popupMenuWillBecomeInvisible(PopupMenuEvent e) {&#xa;                // TODO Auto-generated method stub&#xa;&#xa;            }&#xa;&#xa;            @Override&#xa;            public void popupMenuCanceled(PopupMenuEvent e) {&#xa;                // TODO Auto-generated method stub&#xa;&#xa;            }&#xa;        });"/>
+      </AuxValues>
+
+      <Layout class="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout">
+        <Property name="useNullLayout" type="boolean" value="true"/>
+      </Layout>
+      <SubComponents>
+        <MenuItem class="javax.swing.JMenuItem" name="jMenuItem_webSite">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Copia Sito web"/>
+            <Property name="toolTipText" type="java.lang.String" value=""/>
+          </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="jMenuItem_webSite.addActionListener(new ActionListener() {&#xa;    @Override&#xa;    public void actionPerformed(ActionEvent e) {&#xa;        try {&#xa;            keyring.copyToClipboard(jTable_passwords.convertRowIndexToModel(jTable_passwords.getSelectedRow()), Row.ELEMENT_WEBSITE);&#xa;        } catch (KeyringException ex) {&#xa;            JOptionPane.showMessageDialog(KeyringMain.this, ex.getMessage(),ex.getTitleMsg(),ex.getTypeMessage());&#xa;        }&#xa;    }&#xa;});"/>
+          </AuxValues>
+        </MenuItem>
+        <MenuItem class="javax.swing.JMenuItem" name="jMenuItem_email">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Copia Email"/>
+            <Property name="toolTipText" type="java.lang.String" value=""/>
+          </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="jMenuItem_email.addActionListener(new ActionListener() {&#xa;    @Override&#xa;    public void actionPerformed(ActionEvent e) {&#xa;        try {&#xa;            keyring.copyToClipboard(jTable_passwords.convertRowIndexToModel(jTable_passwords.getSelectedRow()), Row.ELEMENT_EMAIL);&#xa;        } catch (KeyringException ex) {&#xa;            JOptionPane.showMessageDialog(KeyringMain.this, ex.getMessage(),ex.getTitleMsg(),ex.getTypeMessage());&#xa;        }&#xa;    }&#xa;});"/>
+          </AuxValues>
+        </MenuItem>
+        <MenuItem class="javax.swing.JMenuItem" name="jMenuItem_username">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Copia Username"/>
+            <Property name="toolTipText" type="java.lang.String" value=""/>
+          </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="jMenuItem_username.addActionListener(new ActionListener() {&#xa;    @Override&#xa;    public void actionPerformed(ActionEvent e) {&#xa;        try {&#xa;            keyring.copyToClipboard(jTable_passwords.convertRowIndexToModel(jTable_passwords.getSelectedRow()), Row.ELEMENT_USERNAME);&#xa;        } catch (KeyringException ex) {&#xa;            JOptionPane.showMessageDialog(KeyringMain.this, ex.getMessage(),ex.getTitleMsg(),ex.getTypeMessage());&#xa;        }&#xa;    }&#xa;});"/>
+          </AuxValues>
+        </MenuItem>
+        <MenuItem class="javax.swing.JMenuItem" name="jMenuItem_password">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Copia Password"/>
+            <Property name="toolTipText" type="java.lang.String" value=""/>
+          </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="jMenuItem_password.addActionListener(new ActionListener() {&#xa;    @Override&#xa;    public void actionPerformed(ActionEvent e) {&#xa;        try {&#xa;            keyring.copyToClipboard(jTable_passwords.convertRowIndexToModel(jTable_passwords.getSelectedRow()), Row.ELEMENT_PASSWORD);&#xa;        } catch (KeyringException ex) {&#xa;            JOptionPane.showMessageDialog(KeyringMain.this, ex.getMessage(),ex.getTitleMsg(),ex.getTypeMessage());&#xa;        }&#xa;    }&#xa;});"/>
+          </AuxValues>
+        </MenuItem>
+        <MenuItem class="javax.swing.JMenuItem" name="jMenuItem_note">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Copia Note"/>
+            <Property name="toolTipText" type="java.lang.String" value=""/>
+          </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="jMenuItem_note.addActionListener(new ActionListener() {&#xa;    @Override&#xa;    public void actionPerformed(ActionEvent e) {&#xa;        try {&#xa;            keyring.copyToClipboard(jTable_passwords.convertRowIndexToModel(jTable_passwords.getSelectedRow()), Row.ELEMENT_NOTE);&#xa;        } catch (KeyringException ex) {&#xa;            JOptionPane.showMessageDialog(KeyringMain.this, ex.getMessage(),ex.getTitleMsg(),ex.getTypeMessage());&#xa;        }&#xa;    }&#xa;});"/>
+          </AuxValues>
+        </MenuItem>
+      </SubComponents>
+    </Container>
+    <Menu class="javax.swing.JMenuBar" name="jMenuBar1">
+      <SubComponents>
+        <Menu class="javax.swing.JMenu" name="jMenu1">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="File"/>
+          </Properties>
+          <SubComponents>
+            <MenuItem class="javax.swing.JMenuItem" name="jMenuItem_editMasterKey">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Modifica master Key"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jMenuItem_editMasterKeyActionPerformed"/>
+              </Events>
+            </MenuItem>
+            <MenuItem class="javax.swing.JMenuItem" name="jMenuItem_exit">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Esci"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jMenuItem_exitActionPerformed"/>
+              </Events>
+            </MenuItem>
+          </SubComponents>
+        </Menu>
+        <Menu class="javax.swing.JMenu" name="jMenu_credits">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="?"/>
+          </Properties>
+          <SubComponents>
+            <MenuItem class="javax.swing.JMenuItem" name="jMenuItem_credits">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Credits"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jMenuItem_creditsActionPerformed"/>
+              </Events>
+            </MenuItem>
+          </SubComponents>
+        </Menu>
+      </SubComponents>
+    </Menu>
+  </NonVisualComponents>
+  <Properties>
+    <Property name="defaultCloseOperation" type="int" value="0"/>
+    <Property name="title" type="java.lang.String" value="Keyring"/>
+    <Property name="extendedState" type="int" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+      <Connection code="this.getExtendedState() | JFrame.MAXIMIZED_BOTH" type="code"/>
+    </Property>
+    <Property name="iconImage" type="java.awt.Image" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+      <Connection code="Toolkit.getDefaultToolkit().getImage(getClass().getResource(&quot;/Images/logo1.png&quot;))" type="code"/>
+    </Property>
+  </Properties>
+  <SyntheticProperties>
+    <SyntheticProperty name="menuBar" type="java.lang.String" value="jMenuBar1"/>
+    <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
+    <SyntheticProperty name="generateCenter" type="boolean" value="false"/>
+  </SyntheticProperties>
+  <AuxValues>
+    <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_autoSetComponentName" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_generateFQN" type="java.lang.Boolean" value="true"/>
+    <AuxValue name="FormSettings_generateMnemonicsCode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_i18nAutoMode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_layoutCodeTarget" type="java.lang.Integer" value="1"/>
+    <AuxValue name="FormSettings_listenerGenerationStyle" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_variablesLocal" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_variablesModifier" type="java.lang.Integer" value="2"/>
+  </AuxValues>
+
+  <Layout>
+    <DimensionLayout dim="0">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" attributes="0">
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                  <Component id="jButton_remove" alignment="0" pref="0" max="32767" attributes="0"/>
+                  <Component id="jButton_up" alignment="0" min="-2" pref="33" max="-2" attributes="0"/>
+                  <Component id="jButton_down" pref="0" max="32767" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" attributes="0">
+                      <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="32767" attributes="0"/>
+                      <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Component id="jTextField_trova" min="-2" pref="201" max="-2" attributes="0"/>
+                  </Group>
+                  <Component id="jScrollPane1" pref="784" max="32767" attributes="0"/>
+                  <Group type="102" alignment="1" attributes="0">
+                      <Component id="jCheckBox_showPass" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace pref="414" max="32767" attributes="0"/>
+                      <Component id="jButton_edit" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="jButton_add" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="jButton_save" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" attributes="0">
+                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                      <Component id="jLabel_editDate" min="-2" pref="144" max="-2" attributes="0"/>
+                  </Group>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+          </Group>
+      </Group>
+    </DimensionLayout>
+    <DimensionLayout dim="1">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" alignment="1" attributes="0">
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="1" attributes="0">
+                  <Component id="jLabel1" min="-2" pref="50" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="jTextField_trova" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+              </Group>
+              <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" attributes="0">
+                      <EmptySpace min="-2" pref="80" max="-2" attributes="0"/>
+                      <Component id="jButton_up" min="-2" pref="23" max="-2" attributes="0"/>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Component id="jButton_remove" min="-2" pref="30" max="-2" attributes="0"/>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Component id="jButton_down" min="-2" pref="23" max="-2" attributes="0"/>
+                  </Group>
+                  <Component id="jScrollPane1" pref="368" max="32767" attributes="0"/>
+              </Group>
+              <EmptySpace type="unrelated" min="-2" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="jButton_save" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jButton_add" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jCheckBox_showPass" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jButton_edit" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="jLabel_editDate" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
+          </Group>
+      </Group>
+    </DimensionLayout>
+  </Layout>
+  <SubComponents>
+    <Container class="javax.swing.JScrollPane" name="jScrollPane1">
+      <AuxValues>
+        <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+      </AuxValues>
+
+      <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+      <SubComponents>
+        <Component class="javax.swing.JTable" name="jTable_passwords">
+          <Properties>
+            <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
+              <Table columnCount="5" rowCount="0">
+                <Column editable="false" title="Sito web" type="java.lang.String"/>
+                <Column editable="false" title="Email" type="java.lang.String"/>
+                <Column editable="false" title="Usermane" type="java.lang.String"/>
+                <Column editable="false" title="Password" type="java.lang.String"/>
+                <Column editable="false" title="Note" type="java.lang.String"/>
+              </Table>
+            </Property>
+            <Property name="columnModel" type="javax.swing.table.TableColumnModel" editor="org.netbeans.modules.form.editors2.TableColumnModelEditor" postCode="TableRowSorter&lt;TableModel&gt; rowSorter = new TableRowSorter&lt;&gt;(jTable_passwords.getModel());&#xa;        jTable_passwords.setRowSorter(rowSorter);&#xa;        &#xa;        jTextField_trova.getDocument().addDocumentListener(new DocumentListener() {&#xa;            @Override&#xa;            public void insertUpdate(DocumentEvent e) {&#xa;                String text = jTextField_trova.getText();&#xa;                jTable_passwords.clearSelection();&#xa;&#xa;                if (text.trim().length() == 0) {&#xa;                    rowSorter.setRowFilter(null);&#xa;                    jButton_up.setEnabled(true);&#xa;                    jButton_down.setEnabled(true);&#xa;                } else {&#xa;                    rowSorter.setRowFilter(RowFilter.regexFilter(&quot;(?i)&quot; + text));&#xa;                    jButton_up.setEnabled(false);&#xa;                    jButton_down.setEnabled(false);&#xa;                }&#xa;            }&#xa;&#xa;            @Override&#xa;            public void removeUpdate(DocumentEvent e) {&#xa;                String text = jTextField_trova.getText();&#xa;                jTable_passwords.clearSelection();&#xa;&#xa;                if (text.trim().length() == 0) {&#xa;                    rowSorter.setRowFilter(null);                    &#xa;                    jButton_up.setEnabled(true);&#xa;                    jButton_down.setEnabled(true);&#xa;                } else {                    &#xa;                    rowSorter.setRowFilter(RowFilter.regexFilter(&quot;(?i)&quot; + text));&#xa;                    jButton_up.setEnabled(false);&#xa;                    jButton_down.setEnabled(false);&#xa;                }&#xa;            }&#xa;&#xa;            @Override&#xa;            public void changedUpdate(DocumentEvent e) {               &#xa;            }&#xa;        });">
+              <TableColumnModel selectionModel="0">
+                <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                  <Title/>
+                  <Editor/>
+                  <Renderer/>
+                </Column>
+                <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                  <Title/>
+                  <Editor/>
+                  <Renderer/>
+                </Column>
+                <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                  <Title/>
+                  <Editor/>
+                  <Renderer/>
+                </Column>
+                <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                  <Title/>
+                  <Editor/>
+                  <Renderer/>
+                </Column>
+                <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                  <Title/>
+                  <Editor/>
+                  <Renderer/>
+                </Column>
+              </TableColumnModel>
+            </Property>
+            <Property name="componentPopupMenu" type="javax.swing.JPopupMenu" editor="org.netbeans.modules.form.ComponentChooserEditor">
+              <ComponentRef name="jPopupMenu_tablePassword"/>
+            </Property>
+            <Property name="rowHeight" type="int" value="20" postCode="jTable_passwords.getSelectionModel().addListSelectionListener((ListSelectionEvent e) -&gt; {&#xa;    jButton_edit.setEnabled(jTable_passwords.getSelectedRow()&gt;-1);&#xa;});"/>
+            <Property name="tableHeader" type="javax.swing.table.JTableHeader" editor="org.netbeans.modules.form.editors2.JTableHeaderEditor">
+              <TableHeader reorderingAllowed="true" resizingAllowed="true"/>
+            </Property>
+          </Properties>
+        </Component>
+      </SubComponents>
+    </Container>
+    <Component class="javax.swing.JLabel" name="jLabel1">
+      <Properties>
+        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+          <Image iconType="3" name="/Images/logo.png"/>
+        </Property>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="jButton_add">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Aggiungi riga"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton_addActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="jButton_up">
+      <Properties>
+        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+          <Image iconType="3" name="/Images/su.png"/>
+        </Property>
+        <Property name="toolTipText" type="java.lang.String" value="Sposta la riga selezionata in alto"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton_upActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="jButton_remove">
+      <Properties>
+        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+          <Image iconType="3" name="/Images/rimuovi.png"/>
+        </Property>
+        <Property name="toolTipText" type="java.lang.String" value="Rimuovi la riga selezionata"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton_removeActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="jButton_down">
+      <Properties>
+        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+          <Image iconType="3" name="/Images/gi&#xf9;.png"/>
+        </Property>
+        <Property name="toolTipText" type="java.lang.String" value="Sposta la riga selezionata in basso"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton_downActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="jButton_save">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Salva"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton_saveActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JCheckBox" name="jCheckBox_showPass">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Mostra password"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jCheckBox_showPassActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JTextField" name="jTextField_trova">
+      <Properties>
+        <Property name="toolTipText" type="java.lang.String" value="Inserisci il testo da cercare"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel2">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Trova:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="jButton_edit">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Modifica riga"/>
+        <Property name="enabled" type="boolean" value="false"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton_editActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel_editDate">
+      <Properties>
+        <Property name="horizontalAlignment" type="int" value="4"/>
+        <Property name="text" type="java.lang.String" value="File mai salvato."/>
+      </Properties>
+    </Component>
+  </SubComponents>
+</Form>
