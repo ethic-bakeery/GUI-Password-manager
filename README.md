@@ -1,5 +1,5 @@
-# Simple-Java-Keyring
-A simple tool to securely store passwords.
+# Simple Password Manager in Java
+it's simple tool to securely store passwords.
 
 **Instructions:**
 
@@ -9,4 +9,4 @@ A simple tool to securely store passwords.
 
 NB: at the first use the inserted master key will be used to encrypt the new file.
 
-Tags: Password Manager, Gestione Password, Keyring Manager
+Tags: Password Manager
