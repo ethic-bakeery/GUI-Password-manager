@@ -1,5 +1,5 @@
 # Simple Password Manager in Java
-it's simple tool to securely store passwords.
+it's a simple tool use to securely store passwords.
 
 **Instructions:**
 
@@ -7,6 +7,8 @@ it's simple tool to securely store passwords.
 2. Enter passwords
 3. Save
 
-NB: at the first use the inserted master key will be used to encrypt the new file.
+NB: at first use, the inserted master key will be used to encrypt the new file.
+You may need to compile the code and create your own master key.
+execute the code with 'java -jar dist/Keyring.jar'
 
-Tags: Password Manager
+
